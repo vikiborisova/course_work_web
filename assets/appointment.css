@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #002E5D;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 1px 1px 5px white;
+    border-radius: 24px;
+    padding: 0px 40px 0px 40px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-links.hidden {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    margin-right: 7%;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 24px;
+    border: #002E5D 1px solid;
+    padding: 20px;
+    width: 400px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #002E5D;
+    text-align: center;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form .form-group input,
+form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form .form-group input:focus,
+form .form-group select:focus {
+    border-color: #002E5D;
+    outline: none;
+}
+
+form .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #002E5D;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+}
+
+form .form-group button:hover {
+    background-color: #0d4985;
+}
+
+footer {
+    background-color: #002E5D;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer .download-section {
+    margin: 20px 0;
+}
+
+footer .download-section img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+}
+
+footer .footer-links {
+    margin-top: 20px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+@media (min-width: 1024px) {
+    .img-container{
+        margin-right: 20%;
+        width: 40%;
+    }
+
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-text,
+    .info-img {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .img-container{
+        display: none;
+    }
+
+    main {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main article {
+        width: 80%;
+    }
+   
+}
+
+@media (max-width: 767px) {
+
+    .dropdown {
+        display: flex;
+
+    }
+
+    .form-container{
+        width: 270px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-links.show {
+        display: flex;
+        max-height: 200px;
+        background-color: #003E85;
+        border-radius: 24px;
+        margin: 10px;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-text,
+    .info-img {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .img-container{
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section article {
+        width: 90%;
+    }
+
+    footer .download-section img {
+        width: 40px;
+    }
+}
